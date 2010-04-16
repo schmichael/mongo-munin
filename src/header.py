@@ -9,5 +9,5 @@ except ImportError:
 
 
 def getServerStatus():
-    raw = urllib2.urlopen( "http://127.0.0.1:28017/_status" ).read()
-    return json.loads( raw )["serverStatus"]
+    raw = urllib2.urlopen( "http://127.0.0.1:28017/_status" )
+    return json.load( raw )["serverStatus"]
